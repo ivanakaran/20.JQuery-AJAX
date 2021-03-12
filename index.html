@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bikes</title>
+	<meta name="keywords" content="html,css,javaScript">
+	<meta name="description" content="Bikes">
+	<meta name="author" content="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<!-- Latest compiled and minified BOOTSTRAP CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- Local CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Font-awesome 5 cdn -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+	<!-- Navigation Menu -->
+	<div class="container main-view">
+  <nav class="navbar  navbar-expand-md">
+  <img src="./img/logo.png" alt="" class="navbar-brand logo-img">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mx-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">bikes</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">gear</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">parts</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">tires</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">service-info</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">catalogues</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">contact</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<button type="submit" class="btn btn-default mx-2 nav-search">
+					<i class="fas fa-search nav-icon"></i>
+			</button>
+			<i class="fas fa-shopping-bag nav-icon"></i>
+			</form>
+		</div>
+	</nav>
+
+ <!-- Heading -->
+	<div class="border-top border-bottom">
+		<h1 class="display-3 text-capitalize my-3">bikes</h1>
+	</div>
+
+	
+	<div class="row">
+		<!-- Filter Section -->
+		<div class="col-md-3">
+			<h4 class="font-weight-bold my-3">Filter by:</h4>
+			<!-- Show All -->
+			<div class="py-3 border-bottom" id="showAll">
+				<span>Show All</span>
+				<span class="badge badge-pill float-right">0</span>
+			</div>
+      <!-- Gender  -->
+			<div class="border-bottom">
+				<h5 class="pt-2 font-weight-bold">Gender</h5>
+				<div class="filter py-2" id="male">
+					<span class="filter-title">Male</span>
+					<span class="badge badge-pill float-right">0</span>
+				</div>
+				<div class="filter py-2" id="female">
+					<span class="filter-title">Female</span>
+					<span class="badge badge-pill float-right">0</span>
+				</div>
+			</div>
+      <!-- Brand -->
+			<div class="border-bottom">
+				<h5 class="pt-2 font-weight-bold">Brand</h5>
+				<div class="filter py-2 text-uppercase" id="grand-bikes">
+					<span class="filter-title">le grand bikes</span>
+					<span class="badge badge-pill float-right">0</span>
+				</div>
+				<div class="filter py-2 text-uppercase" id="kross">
+					<span class="filter-title">kross</span>
+					<span class="badge badge-pill float-right">0</span>
+				</div>
+				<div class="filter py-2 text-uppercase" id="explorer">
+					<span class="filter-title">explorer</span>
+					<span class="badge badge-pill float-right">0</span>
+				</div>
+				<div class="filter py-2 text-uppercase" id="visitor">
+					<span class="filter-title">visitor</span>
+					<span class="badge badge-pill float-right">0</span>
+				</div>
+				<div class="filter py-2 text-uppercase" id="pony">
+					<span class="filter-title">pony</span>
+					<span class="badge badge-pill float-right">0</span>
+				</div>
+				<div class="filter py-2 text-uppercase" id="force">
+					<span class="filter-title">force</span>
+					<span class="badge badge-pill float-right">0</span>
+				</div>
+				<div class="filter py-2 text-uppercase" id="e-bikes">
+					<span class="filter-title">e-bikes</span>
+					<span class="badge badge-pill float-right">0</span>
+				</div>
+				<div class="filter py-2 text-uppercase" id="ideal">
+					<span class="filter-title">ideal</span>
+					<span class="badge badge-pill float-right">0</span>
+				</div>
+			</div>
+			 
+		</div>
+      <!-- Card Section -->
+			<div class="col-md-9">
+				<div class="row" id="bike-cards">			
+				</div>
+			</div>
+	</div>
+</div>
+
+	<!-- Footer -->
+<footer class=" container py-5">
+	<div class="row">
+		<!-- Social Share -->
+		<div class="col-md-3">
+			<h3>Social Share</h3>
+					<ul class="d-flex social-list my-4">
+						<li><a href="#" class="social"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+						<li><a href="#" class="social"><i class="fab fa-instagram fa-fw"></i></a></li>
+						<li><a href="#" class="social"><i class="fab fa-twitter fa-fw"></i></a></li>
+						<li><a href="#" class="social"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+					</ul>
+		</div>
+		<!-- Event Info  -->
+		<div class="col-md-3 border-left">
+			<h3>Event info</h3>
+					<ul>
+						<li><a href="#">Enter Now</a></li>
+						<li><a href="#">Event Info</a></li>
+						<li><a href="#">Course Maps</a></li>
+						<li><a href="#">Race Pack</a></li>
+						<li><a href="#">Results</a></li>
+						<li><a href="#">FAQs</a></li>
+						<li><a href="#">Am I Registered</a></li>
+					</ul>
+		</div>
+		<!-- Registration -->
+		<div class="col-md-3 border-left">
+			<h3>Registration</h3>
+					<ul>
+						<li><a href="#">Volunteers</a></li>
+						<li><a href="#">Gallery</a></li>
+						<li><a href="#">Press</a></li>
+						<li><a href="#">Results</a></li>
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Service Plus</a></li>
+						<li><a href="#">Contacts</a></li>
+					</ul>
+		</div>
+		<!-- Schedule -->
+		<div class="col-md-3 border-left">
+			<h3>Schedule</h3>
+					<ul>
+						<li><a href="#">Gallery</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Course Maps</a></li>
+						<li><a href="#">Videos</a></li>
+						<li><a href="#">FAQs</a></li>
+						<li><a href="#">Results</a></li>
+						<li><a href="#">Volunteers</a></li>
+					</ul>
+		</div>
+	</div>
+</footer>
+	<!-- jQuery library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+
+
+	<script src="js/main.js"></script>
+</body>
+</html>
